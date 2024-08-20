@@ -1,0 +1,246 @@
+.login-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.login-container::before {
+    position: absolute;
+
+
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #126ab6;
+    top: 0;
+    left: -90px;
+    clip-path: ellipse(48% 98% at 0% 98%);
+    -webkit-clip-path: ellipse(48% 98% at 0% 98%);
+    z-index: -1;
+}
+
+.login-container::after {
+
+    position: absolute;
+    top: 0;
+    left: -90px;
+
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #126ab6;
+    z-index: -1;
+
+    clip-path: ellipse(24% 40% at 35% 100%);
+    -webkit-clip-path: ellipse(24% 40% at 35% 100%);
+}
+
+
+
+
+.login-body {
+    height: 100%;
+    margin: auto;
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    overflow-y: hidden;
+}
+
+.login-body::before {
+    position: absolute;
+
+
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #2097ffd1;
+    top: 14px;
+    left: -32px;
+    clip-path: ellipse(48% 98% at 0% 98%);
+    -webkit-clip-path: ellipse(48% 98% at 0% 98%);
+    z-index: -2;
+
+}
+
+.login-body::after {
+
+    position: absolute;
+    top: 14px;
+    left: -32px;
+
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #2097ffd1;
+    z-index: -3;
+
+    clip-path: ellipse(24% 40% at 35% 100%);
+    -webkit-clip-path: ellipse(24% 40% at 35% 100%);
+}
+
+.login-container-a,
+.login-container-b {
+    width: 40%;
+}
+
+.login-container-a {
+    margin-left: 6px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.101);
+    border-radius: 20px;
+    padding: 30px 3% 30px 3%;
+    box-sizing: border-box;
+    box-shadow: -13px 17px 20px -17px rgba(0, 0, 0, 0.274);
+}
+
+.login-container p {
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.login-container-a small {
+    width: 80%;
+    display: block;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.clickable-buttons {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clickable-buttons>span {
+    text-align: center;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 20px;
+    border-radius: 10px;
+    width: 40%;
+    box-sizing: border-box;
+    border: 1px solid white;
+    box-sizing: border-box;
+    transition: all ease 300ms;
+}
+
+.clickable-buttons>span>p {
+    margin: 0;
+}
+
+.click-button:hover {
+    background-color: #167bd3be;
+}
+
+.click-button.active {
+    background-color: white;
+    color: #126ab6;
+}
+
+
+
+/* 
+.login-container-b{
+    transition: all 300ms ease;
+    height: 50px;
+    opacity: 0;
+}
+.login-container-b.effect{
+    height: auto;
+    opacity: 1;
+} */
+.login-container-b h2 {
+    margin-bottom: 20px;
+}
+
+.login-container-b form {
+    position: relative;
+    width: 100%;
+}
+
+.login-container-b form input {
+    color: black;
+    display: inline-block;
+    border: 1px solid white;
+    user-select: none;
+    outline: none;
+    cursor: default;
+    background-color: rgba(220, 220, 220, 0.301);
+    box-sizing: border-box;
+    width: 97%;
+    border-radius: 15px;
+    position: relative;
+    transition: border 300ms ease, background 300ms ease, color 300ms ease;
+}
+
+.login-container-b form input:focus {
+    border-color: #126ab6;
+}
+
+.login-container-b form input:hover {
+    background-color: rgba(203, 203, 203, 0.357);
+}
+
+.login-container-b form input:hover:focus {
+
+    background-color: rgba(220, 220, 220, 0.301);
+}
+
+
+.login-container-b form .fill:nth-child(1) {
+    margin-right: 5%;
+}
+
+.login-container-b form .fill:nth-child(1),
+.login-container-b form .fill:nth-child(2) {
+    width: 45%;
+}
+
+.login-container-b form input[type=submit] {
+    color: white;
+    background-color: #126ab6;
+}
+
+.login-container-b form input[type=submit]:hover {
+    background-color: #0f5fa4;
+}
+
+.login-container-b form input[type=submit]:active {
+    transition: all ease 250ms;
+    background-color: #0f6fc3;
+}
+
+
+.areax .loog, .area .fill{
+    opacity: 0;
+    padding: 0 25px;
+    margin: 0;
+    height: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 400ms ease;
+}
+
+
+.areax .fill, .area .loog{
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+    padding: 10px 25px;
+    margin: 15px 0;
+    height: auto;
+}
+.areax .fill, .area .loog,
+.areax .loog, .area .fill{
+    transition: all 400ms ease;
+}
+

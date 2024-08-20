@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>P.W.S.S</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Peace Way Standard School offers a nurturing and inclusive learning environment, dedicated to academic excellence, holistic development, and fostering global citizens. Our experienced faculty and comprehensive curriculum ensure that students achieve their fullest potential in a supportive community.">
+
+    <meta name="keywords"
+        content="Peace Way Standard School, inclusive learning environment, academic excellence, holistic development, global citizens, experienced faculty, comprehensive curriculum, supportive community, primary education, secondary education, quality education, student-centered approach">
+    <meta name="author" content="Code Savant">
+
+
+    <!-- link icons -->
+    <link rel="icon" href="./images/icons8-logo-1600.png" type="image/x-icon">
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="Peace Way Standard School">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:description"
+        content="Peace Way Standard School offers a nurturing and inclusive learning environment, dedicated to academic excellence and holistic development.">
+    <meta name="twitter:title" content="Peace Way Standard School">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:url" content="">
+
+
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+
+    <!-- stylesheet  -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/sign_up.css">
+    <link rel="stylesheet" href="./css/animation.css">
+    <link rel="stylesheet" href="./css/mediaquery.css">
+
+
+</head>
+
+<body id="colorBlue">
+
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <nav>
+
+        <div class="top-nav">
+
+            <div class="aa">
+                <img src="./images/icons8-logo-1600.png" alt="school logo">
+                <span class="L-name">PWSS</span>
+            </div>
+
+            <button onclick="menueBar()" class="menueBar" id="menuNav">
+
+                <span class="s-1"> </span>
+                <span class="s-2"> </span>
+                <span class="s-3"> </span>
+
+            </button>
+
+            <div class="bb">
+                <a href="index.html" class="effect">Home</a>
+                <a href="faq.html" class="effect">FAQ</a>
+                <a href="contact.html" class="effect">Contact</a>
+                <a href="index.html" class="effect">Testimonials</a>
+                <span class="dropdown">
+                    <a href="index.html">Gallery</a>
+                    <!-- drop down effect   -->
+                    <div class="dropdown-down"><span>comming soon</span></div>
+                </span>
+                <span>
+                    <!-- <a href="login.html" class="enroll">Sign up</a> -->
+                </span>
+            </div>
+        </div>
+
+    </nav>
+
+
+    <div class="login-container">
+
+        <div class="login-body">
+
+            <!-- content  -->
+            <div class="login-container-a">
+
+                <p>Welcome To P.W.S.S</p>
+                <h2>Where knowldege Blomms And Grows</h2>
+                <p><small>
+                        Empowering minds and inspireing futures for younger generations.
+                        <span id="iner">Sign In to proceed.</span>
+                    </small></p>
+
+                <span class="clickable-buttons">
+                    <span id="ClickA" class="click-button">
+                        <p>Sign Up</p>
+                    </span>
+                    <span id="ClickB" class="click-button active">
+                        <p>Sign In</p>
+                    </span>
+                </span>
+
+            </div>
+
+
+
+
+            <!-- form  -->
+            <div class="login-container-b area">
+
+                <h2>Login To Your Account.</h2>
+                <form action="">
+
+                    <input class="fill" type="text" name="name" placeholder="First Name" required>
+                    <input class="fill" type="text" name="name" placeholder="Last Name" required>
+                    <input class="fill" type="text" name="name" placeholder="User Name" required>
+                    <input class="fill" type="email" name="email" placeholder="Enter Email" required>
+                    <input class="fill" type="password" name="password" placeholder="Create Paasword" required>
+                    <input class="fill" type="password" name="password" placeholder="Confirm Paasword" required>
+                    <input class="fill" type="submit" value="Submit">
+
+                    <input class="loog" type="email" name="email" placeholder="Enter Email" required>
+                    <input class="loog" type="password" name="password" placeholder="Enter Paasword" required>
+                    <input class="loog" type="submit" value="Login">
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+<script>
+
+    const spannA = document.getElementById("ClickA");
+    const spannB = document.getElementById("ClickB");
+    const SommeA = document.querySelectorAll(".fill");
+    const SommeB = document.querySelectorAll(".loog");
+    const EffectA =  document.querySelector('.login-container-b')
+
+
+
+
+
+    spannA.addEventListener("click", function () {
+
+        // remove class list 
+        if (spannB == document.querySelector('.click-button.active')) {
+            spannB.classList.remove('active')
+        }
+        // add class list 
+        this.classList.add("active");
+        // add class lst 
+        this.classList.add("active");
+
+        if (EffectA == document.querySelector('.login-container-b.area')) {
+            EffectA.classList.remove('area')
+        }
+        EffectA.classList.add("areax");
+
+
+
+        // SommeA.forEach(SommeA => {
+        //     SommeA.style.display = 'inline-block';
+        // });
+        // SommeB.forEach(SommeB => {
+        //     SommeB.style.display = 'none';
+
+        // });
+
+        // change text 
+        document.querySelector('.login-container-b h2').innerHTML = 'Create A New Account.';
+        document.getElementById('iner').innerHTML = 'Sign up to begin your journey.';
+    })
+
+
+
+    spannB.addEventListener("click", function () {
+
+        // remove class list 
+        if (spannA == document.querySelector('.click-button.active')) {
+            spannA.classList.remove('active')
+        }
+        // add class lst 
+        this.classList.add("active");
+
+
+        
+        if (EffectA == document.querySelector('.login-container-b.areax')) {
+            EffectA.classList.remove('areax')
+        }
+        EffectA.classList.add("area");
+        // SommeB.forEach(SommeB => {
+        //     SommeB.style.classList.add("skills");
+        // });
+        // SommeA.forEach(SommeA => {
+        //     SommeB.style.classList.remove("skills");
+        // });
+
+
+        // change text 
+        document.querySelector('.login-container-b h2').innerHTML = 'Login To Your Account.';
+        document.getElementById('iner').innerHTML = 'Sign In to proceed.';
+    })
+
+
+
+
+
+
+</script>
+<script src="./js/script.js"></script>
+
+</html>
